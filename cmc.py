@@ -3,4 +3,5 @@ from coinmarketcap import Market
 coinmarketcap = Market()
 coins = coinmarketcap.ticker(start=0, limit=100, convert='USD')
 filtered_change_24 = list(filter(lambda coin:float(coin['percent_change_24h']) > 10, coins))
-print filtered_change_24 
+for coin in filtered_change_24:
+    print(coin['name']+":"+coin['price_usd']+"="+coin['percent_change_24h']+"%") 
