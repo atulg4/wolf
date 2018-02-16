@@ -1,0 +1,7 @@
+from ubuntu:17.10
+
+RUN apt-get update -y --force-yes
+RUN apt-get install python python-pip -y --force-yes
+RUN pip install coinmarketcap
+RUN apt-get install vim -y --force-yes
+RUN apt-get install git -y --force-yes
